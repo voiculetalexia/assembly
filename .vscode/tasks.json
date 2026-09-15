@@ -1,0 +1,17 @@
+  {
+      "version": "2.0.0",
+      "tasks": [
+          {
+              "label": "Build first.s",
+              "type": "shell",
+              "command": "gcc -g -no-pie -o first first.s",
+              "problemMatcher": []
+          },
+          {
+              "label": "Build rps.s",
+              "type": "shell",
+              "command": "gcc -g -no-pie -o rps rps.s",
+              "problemMatcher": []
+          }
+      ]
+  }
