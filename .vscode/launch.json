@@ -14,6 +14,7 @@
               "miDebuggerPath": "/usr/bin/gdb",
               "preLaunchTask": "Build first.s"
           },
+          
           {
               "name": "Debug rps.s",
               "type": "cppdbg",
