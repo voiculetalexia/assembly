@@ -11,7 +11,7 @@ main:
 pushq %rbp
 movq %rsp, %rbp
 
-#comentariu
+#comentariu 2
 
 subq $16, %rsp
 
