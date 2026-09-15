@@ -1,17 +1,22 @@
-  {
-      "version": "2.0.0",
-      "tasks": [
-          {
-              "label": "Build first.s",
-              "type": "shell",
-              "command": "gcc -g -no-pie -o first first.s",
-              "problemMatcher": []
-          },
-          {
-              "label": "Build rps.s",
-              "type": "shell",
-              "command": "gcc -g -no-pie -o rps rps.s",
-              "problemMatcher": []
-          }
-      ]
-  }
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Active File",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "-no-pie",
+                "-o",
+                "${fileBasenameNoExtension}",
+                "${fileBasename}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,35 +1,17 @@
-  {
-      "version": "0.2.0",
-      "configurations": [
-
-          {
-              "name": "Debug first.s",
-              "type": "cppdbg",
-              "request": "launch",
-              "program": "${workspaceFolder}/first",
-              "args": [],
-              "stopAtEntry": true,
-              "cwd": "${workspaceFolder}",
-              "MIMode": "gdb",
-              "miDebuggerPath": "/usr/bin/gdb",
-              "preLaunchTask": "Build first.s"
-          },
-
-
-
-          
-          {
-              "name": "Debug rps.s",
-              "type": "cppdbg",
-              "request": "launch",
-              "program": "${workspaceFolder}/rps",
-              "args": [],
-              "stopAtEntry": true,
-              "cwd": "${workspaceFolder}",
-              "MIMode": "gdb",
-              "miDebuggerPath": "/usr/bin/gdb",
-              "preLaunchTask": "Build rps.s"
-          }
-      ]
-  }
-  
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Active File",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "preLaunchTask": "Build Active File"
+        }
+    ]
+}
