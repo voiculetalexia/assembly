@@ -13,7 +13,7 @@ main:
 pushq %rbp #push the base pointer onto the stack
 movq %rsp, %rbp #copy stack pointer value to base pointer
 
-movq $0, %rax #
+movq $0, %rax #no vector registers in use for printf
 movq $factorialmessage, %rdi
 call printf
 
@@ -68,8 +68,10 @@ movq %rsp, %rbp
 cmpq $0, %rdi
 je iffactorial
 push %rdi
+subq $8, %rsp #aligning the stack
 decq %rdi
 call factorial
+addq $8, %rsp #cleaning upp the 8-byte padding
 pop %rdi
 mulq %rdi
 jmp end
